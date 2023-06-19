@@ -63,7 +63,7 @@ public class DebeziumListener {
                     .collect(toMap(Pair::getKey, Pair::getValue));
 
                 this.customerService.replicateData(payload, operation);
-                log.info("Updated Data: {} with Operation: {}", payload, operation.name());
+                log.info("Updated Data: {} with Operations: {}", payload, operation.name());
             }
         }
     }
